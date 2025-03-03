@@ -1,0 +1,279 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bar:nth-child(1) {
+    top: 12px;
+}
+
+.bar:nth-child(2) {
+    top: 19px;
+}
+
+.bar:nth-child(3) {
+    top: 26px;
+}
+
+.hamburger.active {
+    background-color: #007bff;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateX(-50%) rotate(45deg);
+    top: 19px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateX(-50%) rotate(-45deg);
+    top: 19px;
+}
+
+#nav .container .navbar-header a.navbar-brand {
+    font-size: 1.4rem;
+    font-family: varsity, "Playwrite IT Moderna", serif;
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    position: relative;
+    transition: all 0.3s ease;
+    animation: lightSpeedInRight;
+    animation-duration: 3s;
+    animation-delay: 1999ms;
+}
+
+#nav .container .navbar-header a.navbar-brand:hover {
+    color: #0984e3;
+    transform: translateY(-1px);
+}
+
+#nav .container .navbar-header a.navbar-brand::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0984e3;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#nav .container .navbar-header a.navbar-brand:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+#nav .container .collapse ul li {
+    position: relative;
+    animation-duration: 3s;
+    animation-delay: 1999ms;
+    padding: 0.5rem 1rem;
+}
+
+#nav .container .collapse ul li:after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+#nav .container .collapse ul li:hover:after {
+    transform: scaleX(1);
+}
+
+#nav .container .collapse ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+#nav .container .collapse ul li:hover a {
+    color: #0984e3;
+}
+
+/* Responsive Design */
+@media (min-width: 1281px) {
+    .navbar .container {
+        padding: 0 4rem;
+    }
+
+    #nav .container .navbar-header a.navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .navbar-nav {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .navbar .container {
+        padding: 0 3rem;
+    }
+
+    #nav .container .navbar-header a.navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar .container {
+        padding: 0 2rem;
+    }
+
+    #nav .container .navbar-header a.navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-nav {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hamburger {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    #nav .container .navbar-header a.navbar-brand {
+        font-size: 1.3rem;
+        color: #000;
+    }
+
+    #nav .container .collapse ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #nav .container .collapse ul li a {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    #nav .container .collapse ul li:after {
+        background-color: #007bff;
+    }
+
+    #nav .container .collapse ul li:hover a {
+        color: #fff;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        padding: 0 1rem;
+    }
+
+    #nav .container .navbar-header a.navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse {
+        padding: 0.5rem;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+
+    #nav .container .collapse ul li a {
+        padding: 0.4rem;
+        font-size: 1.1rem;
+    }
+}
