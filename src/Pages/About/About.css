@@ -1,0 +1,210 @@
+.about-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 90px;
+    height: 15rem;
+    color: #fff;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a1a, #333);
+    animation: gradientShift 8s ease infinite;
+}
+
+.about-title h1 {
+    text-transform: uppercase;
+    font-family: 'Boricua', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: slideDown 1s ease-out;
+}
+
+.about-title p {
+    font-family: 'Boricua', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    max-width: 800px;
+    line-height: 1.6;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    position: relative;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.about-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-content ul li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+.about-content ul li:before {
+    content: "•";
+    color: #1a1a1a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+}
+
+.about-content p {
+    margin-bottom: 2rem;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.3rem;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-title {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInDown 1s ease forwards;
+}
+
+.animate-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.animate-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
+
+.delay-7 {
+    animation-delay: 1.4s;
+}
+
+.delay-8 {
+    animation-delay: 1.6s;
+}
+
+.delay-9 {
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

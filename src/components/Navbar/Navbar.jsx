@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import "animate.css"; // Adding animate.css for animations
 
@@ -47,9 +48,9 @@ const Navbar = () => {
     <nav className="navbar" id="nav">
       <div className="container">
         <div className="navbar-header">
-          <a className="navbar-brand" href="#home" onClick={closeMenu}>
+          <Link className="navbar-brand" to="/" onClick={closeMenu}>
             Jessica Adzoyi
-          </a>
+          </Link>
         </div>
         <div
           className={`hamburger ${isOpen ? "active" : ""}`}
@@ -62,27 +63,27 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#home" onClick={closeMenu}>
+              <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about" onClick={closeMenu}>
+              <Link className="nav-link" to="/projects" onClick={closeMenu}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#resume" onClick={closeMenu}>
+              <a className="nav-link" href="/resume" onClick={closeMenu}>
                 Resume
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about" onClick={closeMenu}>
+              <a className="nav-link" href="/about" onClick={closeMenu}>
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact" onClick={closeMenu}>
+              <a className="nav-link" href="/contact" onClick={closeMenu}>
                 Contact
               </a>
             </li>

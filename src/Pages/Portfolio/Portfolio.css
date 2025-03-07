@@ -1,0 +1,219 @@
+.portfolio-container {
+    margin: 0 auto;
+}
+
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 90px;
+    height: 15rem;
+    color: #fff;
+    background-color: black;
+}
+
+.portfolio-title h1 {
+    text-transform: uppercase;
+    font-family: 'Boricua', sans-serif;
+    font-size: 6rem;
+    padding-top: 3rem;
+    font-weight: 500;
+}
+
+.portfolio-title p {
+    font-family: 'Boricua', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: -2rem;
+    letter-spacing: 0.15rem;
+    /* padding-top: 1rem; */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-wrapper {
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    border-radius: 30px;
+}
+
+.project-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-content h3 {
+    text-align: center;
+}
+
+.project-card:hover .project-content {
+    opacity: 1;
+}
+
+.project-content h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+    transform: translateY(0);
+}
+
+.project-content p {
+    color: white;
+    margin: 1rem 0;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.project-card:hover .project-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease 0.2s;
+}
+
+.project-card:hover .tech-stack {
+    transform: translateY(0);
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.project-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: transparent;
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    background: #24292e;
+    cursor: pointer;
+    position: relative;
+    pointer-events: none;
+}
+
+.project-links a img {
+    pointer-events: auto;
+}
+
+.project-links a:hover {
+    transform: scale(1.1);
+}
+
+.project-links a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-top: 5px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.project-links a:hover::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    margin-top: -5px;
+    z-index: 1000;
+}
+
+.project-links img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.project-links a:hover img {
+    opacity: 0.1;
+}
+
+.github-link {
+    background: #24292e;
+}
+
+.live-link {
+    background: #007bff;
+}
