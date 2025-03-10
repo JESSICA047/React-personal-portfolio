@@ -20,5 +20,4 @@ export const projectsData = [
     liveLink: "https://todo-list-react-jet.vercel.app/",
     technologies: ["React", "Node.js", "MongoDB"],
   },
-  // Add more projects here
 ];
