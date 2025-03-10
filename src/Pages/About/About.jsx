@@ -14,7 +14,7 @@ function About() {
 
   return (
     <div>
-      <div className="about-title" data-aos="fade-down">
+      <div className="about-title" data-aos="fade-up">
         <h1>About</h1>
         <p>
           LEARN MORE ABOUT MY JOURNEY, SKILLS, AND EXPERIENCE IN THE WORLD OF
@@ -39,19 +39,19 @@ function About() {
         </h2>
         <ul>
           <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-            Front-end: HTML5, CSS3, JavaScript, React.js, Tailwind CSS
+            Front-end: HTML5, CSS3, JavaScript, React.js,
           </li>
           <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-            Back-end: Node.js, Express.js
+            Back-end: 
           </li>
           <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-            Databases: MongoDB, PostgreSQL
+            Databases: 
           </li>
           <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
             Version Control: Git, GitHub
           </li>
           <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
-            Other Tools: Redux, Socket.io
+            Other Tools: 
           </li>
         </ul>
         <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900">

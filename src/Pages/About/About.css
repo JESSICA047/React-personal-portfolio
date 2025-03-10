@@ -32,7 +32,6 @@
     letter-spacing: 2px;
     margin-bottom: 1rem;
     position: relative;
-    animation: slideDown 1s ease-out;
 }
 
 .about-title p {
@@ -44,7 +43,6 @@
     max-width: 800px;
     line-height: 1.6;
     position: relative;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .about-content {
@@ -63,8 +61,6 @@
     margin-bottom: 1.5rem;
     color: #1a1a1a;
     font-weight: 600;
-    position: relative;
-    animation: slideInLeft 0.8s ease-out;
 }
 
 .about-content ul {
@@ -106,105 +102,5 @@
 
     100% {
         background-position: 0% 50%;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.9;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.animate-title {
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: fadeInDown 1s ease forwards;
-}
-
-.animate-subtitle {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards 0.5s;
-}
-
-.animate-content {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.delay-1 {
-    animation-delay: 0.2s;
-}
-
-.delay-2 {
-    animation-delay: 0.4s;
-}
-
-.delay-3 {
-    animation-delay: 0.6s;
-}
-
-.delay-4 {
-    animation-delay: 0.8s;
-}
-
-.delay-5 {
-    animation-delay: 1s;
-}
-
-.delay-6 {
-    animation-delay: 1.2s;
-}
-
-.delay-7 {
-    animation-delay: 1.4s;
-}
-
-.delay-8 {
-    animation-delay: 1.6s;
-}
-
-.delay-9 {
-    animation-delay: 1.8s;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
