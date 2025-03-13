@@ -74,7 +74,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/resume" onClick={closeMenu}>
-                Resume
+                Experience
               </Link>
             </li>
             <li className="nav-item">

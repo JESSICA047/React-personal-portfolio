@@ -1,10 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { projectsData } from "../../components/Project/Project";
 import "./Portfolio.css";
+import AOS from "aos";
 import github from "../../assets/images/github.png";
 import laptop from "../../assets/images/laptop.png";
+import "aos/dist/aos.css";
 
 function Portfolio() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState(projectsData);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out",
+    });
+  }, []);
+
+  // Get unique technology categories
+  const allTechnologies = ["All"];
+  projectsData.forEach((project) => {
+    project.technologies.forEach((tech) => {
+      if (!allTechnologies.includes(tech)) {
+        allTechnologies.push(tech);
+      }
+    });
+  });
+
+  // Filter projects based on selected technology
+  const handleFilterClick = (tech) => {
+    setActiveFilter(tech);
+
+    if (tech === "All") {
+      setFilteredProjects(projectsData);
+      return;
+    }
+
+    const filtered = projectsData.filter((project) =>
+      project.technologies.includes(tech)
+    );
+    setFilteredProjects(filtered);
+
+    // Re-initialize AOS for filtered items
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+  };
+
   return (
     <div className="portfolio-container">
       <div className="portfolio-title">
@@ -12,9 +55,26 @@ function Portfolio() {
         <p>HERE ARE SOME OF THE PROJECTS THAT I'VE COMPLETED</p>
       </div>
 
+      <div className="portfolio-filters" data-aos="fade-up">
+        {allTechnologies.map((tech, index) => (
+          <button
+            key={index}
+            className={`filter-btn ${activeFilter === tech ? "active" : ""}`}
+            onClick={() => handleFilterClick(tech)}
+          >
+            {tech}
+          </button>
+        ))}
+      </div>
+
       <div className="projects-grid">
-        {projectsData.map((project, index) => (
-          <div key={index} className="project-wrapper">
+        {filteredProjects.map((project, index) => (
+          <div
+            key={index}
+            className="project-wrapper"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
             <div className="project-card">
               <img
                 src={project.image}
@@ -41,7 +101,7 @@ function Portfolio() {
                 className="github-link"
                 data-tooltip="View on GitHub"
               >
-                <img src={github} alt="github" />
+                <img src={github} alt="GitHub" />
               </a>
               <a
                 href={project.liveLink}
@@ -50,7 +110,7 @@ function Portfolio() {
                 className="live-link"
                 data-tooltip="View Live Demo"
               >
-                <img src={laptop} alt="laptop" />
+                <img src={laptop} alt="Live Demo" />
               </a>
             </div>
           </div>

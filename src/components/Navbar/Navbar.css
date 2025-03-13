@@ -85,7 +85,7 @@
 }
 
 #nav .container .navbar-header a.navbar-brand:hover {
-    color: #0984e3;
+    color: #007bff;
     transform: translateY(-1px);
 }
 
@@ -96,7 +96,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #0984e3;
+    background-color: #007bff;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;

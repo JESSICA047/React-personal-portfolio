@@ -2,24 +2,305 @@
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 90px;
-    height: 15rem;
+    padding: 4rem 0;
     color: #fff;
-    background-color: black;
+    background: linear-gradient(135deg, #000000 0%, #434343 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23333" opacity="0.1"/></svg>');
+    background-size: cover;
 }
 
 .resume-title h1 {
     text-transform: uppercase;
     font-family: 'Boricua', sans-serif;
-    font-size: 6rem;
-    padding-top: 3rem;
-    font-weight: 500;
+    font-size: 5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 1rem;
 }
 
 .resume-title p {
     font-family: 'Boricua', sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
-    margin-top: -2rem;
-    letter-spacing: 0.15rem;
-    /* padding-top: 1rem; */
+    letter-spacing: 0.2rem;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.resume-container {
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.resume-content {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.resume-section {
+    margin-bottom: 3rem;
+}
+
+.resume-section h2 {
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Boricua', sans-serif;
+    font-size: 2rem;
+}
+
+.resume-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid #333;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.resume-date {
+    color: #666;
+    font-style: italic;
+}
+
+.resume-item h4 {
+    color: #666;
+    margin: 0.2rem 0 1rem 0;
+}
+
+.resume-item ul {
+    padding-left: 1.5rem;
+}
+
+.resume-item li {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.skill-item {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.download-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+.download-btn:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Resume Page */
+@media (min-width: 1281px) {
+    .resume-content {
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .resume-content {
+        max-width: 90%;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .resume-title h1 {
+        font-size: 4rem;
+    }
+
+    .resume-title p {
+        font-size: 1.5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resume-download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .download-btn {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .resume-title h1 {
+        font-size: 3rem;
+    }
+
+    .resume-title p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .resume-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .resume-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .resume-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-date {
+        margin-top: 0.5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .resume-download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .download-btn {
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-title {
+        padding: 3rem 0;
+    }
+
+    .resume-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .resume-title p {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        padding: 0 1rem;
+    }
+
+    .resume-content {
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 5px;
+    }
+
+    .resume-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .resume-item {
+        padding-left: 0.8rem;
+    }
+
+    .resume-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .resume-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-date {
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .skill-item {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .download-btn {
+        margin-left: 0;
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        font-size: 0.9rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1rem;
+    }
 }

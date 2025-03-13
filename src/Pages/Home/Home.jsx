@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Home.css";
 import "animate.css";
@@ -17,7 +18,11 @@ function Home() {
           <div className="right">
             <div className="intro-text animate__animated animate__fadeInRight">
               <p className="im-text">
-                I'M <span className="name">JESSICA</span>, 
+                I'M{" "}
+                <Link to="/resume" className="name">
+                  JESSICA
+                </Link>
+                ,
               </p>
               <p className="role-text">AND I'M A FRONT-END DEVELOPER.</p>
             </div>
