@@ -155,6 +155,17 @@
     color: #0984e3;
 }
 
+
+/* For active links - similar to hover state */
+#nav .container .collapse ul li a.active-link {
+    color: #0984e3;
+}
+
+/* Background effect for active items */
+#nav .container .collapse ul li.active-item:after {
+    transform: scaleX(1);
+}
+
 /* Responsive Design */
 @media (min-width: 1281px) {
     .navbar .container {
@@ -252,6 +263,16 @@
 
     #nav .container .collapse ul li:hover a {
         color: #fff;
+    }
+
+    #nav .container .collapse ul li a.active-link {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #nav .container .collapse ul li.active-item:after {
+        background-color: #007bff;
+        transform: scaleX(1);
     }
 }
 

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Added useLocation
 import "./Navbar.css";
-import "animate.css"; // Adding animate.css for animations
+import "animate.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Get current route path
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -62,28 +63,78 @@ const Navbar = () => {
         </div>
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMenu}>
+            <li
+              className={`nav-item ${
+                location.pathname === "/" ? "active-item" : ""
+              }`}
+            >
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/" ? "active-link" : ""
+                }`}
+                to="/"
+                onClick={closeMenu}
+              >
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/projects" onClick={closeMenu}>
+            <li
+              className={`nav-item ${
+                location.pathname === "/projects" ? "active-item" : ""
+              }`}
+            >
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/projects" ? "active-link" : ""
+                }`}
+                to="/projects"
+                onClick={closeMenu}
+              >
                 Projects
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/resume" onClick={closeMenu}>
+            <li
+              className={`nav-item ${
+                location.pathname === "/resume" ? "active-item" : ""
+              }`}
+            >
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/resume" ? "active-link" : ""
+                }`}
+                to="/resume"
+                onClick={closeMenu}
+              >
                 Experience
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about" onClick={closeMenu}>
+            <li
+              className={`nav-item ${
+                location.pathname === "/about" ? "active-item" : ""
+              }`}
+            >
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/about" ? "active-link" : ""
+                }`}
+                to="/about"
+                onClick={closeMenu}
+              >
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact" onClick={closeMenu}>
+            <li
+              className={`nav-item ${
+                location.pathname === "/contact" ? "active-item" : ""
+              }`}
+            >
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/contact" ? "active-link" : ""
+                }`}
+                to="/contact"
+                onClick={closeMenu}
+              >
                 Contact
               </Link>
             </li>
