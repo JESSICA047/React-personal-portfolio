@@ -13,15 +13,15 @@ export const projectsData = [
     image: vowelCounter,
     githubLink: "https://github.com/JESSICA047/vowel-counter-react",
     liveLink: "https://vowel-counter-react.vercel.app/",
-    technologies: ["React", "CSS", "JavaScript"],
+    technologies: ["React", "CSS", "JavaScript", "JSX"],
   },
   {
     title: "Todo List App",
-    description: "Task management application with CRUD functionality",
+    description: "Task management application with functionality",
     image: todoList,
     githubLink: "https://github.com/JESSICA047/todo-list-react",
     liveLink: "https://todo-list-react-jet.vercel.app/",
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["HTML","JavaScript", "CSS"],
   },
   {
     title: "Coffee Shop Website",
@@ -38,16 +38,16 @@ export const projectsData = [
     image: productly,
     githubLink: "https://github.com/JESSICA047/Productly",
     liveLink: "https://jessica047.github.io/Productly/",
-    technologies: ["HTML", "CSS", "Responsive Design"],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Food Delivery App",
+    title: "Food App",
     description:
       "Full-stack food ordering application with user authentication",
     image: foodapp,
     githubLink: "https://github.com/JESSICA047/food-app",
     liveLink: "https://food-bank-eta.vercel.app/",
-    technologies: ["React"],
+    technologies: ["React", "JSX", "CSS", "JavaScript"],
   },
   {
     title: "Task Manager Pro",
@@ -55,6 +55,6 @@ export const projectsData = [
     image: todoList,
     githubLink: "https://github.com/JESSICA047/todo-list-react",
     liveLink: "https://todo-list-react-jet.vercel.app/",
-    technologies: ["React",],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];

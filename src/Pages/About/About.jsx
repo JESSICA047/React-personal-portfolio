@@ -20,48 +20,57 @@ function About() {
       <div className="about-title">
         <h1 data-aos="fade-down">About</h1>
         <p data-aos="fade-up">
-          LEARN MORE ABOUT MY JOURNEY, SKILLS, AND EXPERIENCE IN THE WORLD OF
-          WEB DEVELOPMENT
+          LEARN MORE ABOUT MY JOURNEY, SKILLS, AND ASPIRATIONS IN WEB
+          DEVELOPMENT
         </p>
       </div>
 
       <div className="about-content">
         <p data-aos="fade-up">
-          Hello there, I'm Jessica, a full-stack developer in the making with a
-          passion for machine learning and AI. I'm currently based in Ghana and
-          actively building my skills in software development while integrating
-          my background in biomedical sciences and data science.
+          Hello! I'm Jessica, a <strong>junior front-end developer</strong> with a
+          growing interest in
+          <strong> health-tech applications</strong>. Based in Ghana, I'm
+          actively developing my skills in web development while drawing from my
+          background in
+          <strong> biomedical sciences</strong>.
         </p>
 
         <p data-aos="fade-up" data-aos-delay="100">
-          I'm constantly learning new technologies and sharpening my
-          problem-solving skills to create impactful digital solutions. My goal
-          is to bridge the gap between healthcare, AI, and software development
-          by building smart, data-driven applications.
+          I dedicate my time to learning new technologies, practicing coding,
+          and exploring how digital solutions can address real-world problems.
+          My ambition is to create intuitive interfaces that make healthcare
+          information more accessible and user-friendly.
         </p>
 
         <h2 data-aos="fade-up">Technical Skills</h2>
 
         <div data-aos="fade-up" data-aos-delay="100">
           <ul>
-            <li>Front-end: HTML5, CSS3, JavaScript, React.js</li>
-            <li>Back-end: Node.js, Express</li>
-            <li>Databases: MongoDB, SQL</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Other Tools: VS Code, Figma, Postman</li>
+            <li>
+              🚀 <strong>Front-end:</strong> HTML5, CSS3, JavaScript, React.js
+            </li>
+            <li>
+             🎮 <strong>Version Control:</strong> Git, GitHub
+            </li>
+            <li>
+              🎨 <strong>Design Tools:</strong> VS Code,
+            </li>
           </ul>
         </div>
 
         <p data-aos="fade-up" data-aos-delay="150">
-          When I'm not coding, you'll find me writing, brainstorming business
-          ideas, or exploring AI applications. I also love a good TV series,
-          especially anything with a great storyline!
+          When I'm not coding, you'll find me writing, exploring new
+          technologies, or watching TV series. I enjoy learning about emerging
+          trends in the tech industry and how they can be applied to healthcare
+          solutions.
         </p>
 
         <p data-aos="fade-up" data-aos-delay="200">
-          I'm actively looking for collaborations and exciting opportunities in
-          software development, AI, and data-driven projects. Feel free to
-          connect with me through my socials below!
+          I'm currently seeking <strong>collaborative opportunities</strong> and
+          <strong> front-end development projects</strong> that will help me
+          grow professionally. I'm particularly interested in health-tech
+          initiatives where I can contribute my developing skills. Let's
+          connect!
         </p>
       </div>
 

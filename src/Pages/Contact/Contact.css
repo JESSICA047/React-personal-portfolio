@@ -55,6 +55,7 @@
 }
 
 .contact-info {
+    margin-top: 5rem;
     flex: 1;
     min-width: 300px;
     padding: 2rem;

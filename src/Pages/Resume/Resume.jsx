@@ -16,12 +16,11 @@ function Resume() {
   return (
     <div className="resume-container">
       <div className="resume-title">
-        <h1 data-aos="fade-down">Resume</h1>
+        <h1 data-aos="fade-down">Experience</h1>
         <p data-aos="fade-up">
           EXPLORE MY PROFESSIONAL EXPERIENCE, EDUCATION, AND TECHNICAL EXPERTISE
         </p>
       </div>
-
       <div className="resume-content">
         <div className="resume-section" data-aos="fade-up">
           <h2>Experience</h2>
@@ -32,17 +31,14 @@ function Resume() {
             data-aos-delay="200"
           >
             <div className="resume-item-header">
-              <h3>Web Developer</h3>
-              <span className="resume-date">2022 - Present</span>
+              <h3>Frontend Developer Intern</h3>
+              <span className="resume-date">Oct 2024 - Present</span>
             </div>
-            <h4>Company Name</h4>
+            <h4>Node Eight</h4>
             <ul>
-              <li>Developed responsive web applications using React</li>
               <li>
-                Collaborated with design team to implement UI/UX improvements
-              </li>
-              <li>
-                Improved website performance by optimizing code and assets
+                Worked in team to develop a responsive web applications using
+                React
               </li>
             </ul>
           </div>
@@ -53,14 +49,12 @@ function Resume() {
             data-aos-delay="400"
           >
             <div className="resume-item-header">
-              <h3>Frontend Developer Intern</h3>
-              <span className="resume-date">2021 - 2022</span>
+              <h3>Monitoring Evaluating and Learning Officer Intern</h3>
+              <span className="resume-date">Oct 2024 - Present</span>
             </div>
-            <h4>Another Company</h4>
+            <h4>Node Eight</h4>
             <ul>
-              <li>Created interactive UI components with JavaScript and CSS</li>
-              <li>Assisted senior developers with code reviews and testing</li>
-              <li>Implemented responsive designs for mobile and desktop</li>
+              <li>Monitored , Evaluated and Analyzed data for company</li>
             </ul>
           </div>
         </div>
@@ -75,7 +69,7 @@ function Resume() {
           >
             <div className="resume-item-header">
               <h3>Bachelor of Science in Computer Science</h3>
-              <span className="resume-date">2018 - 2022</span>
+              <span className="resume-date">2023 - Present</span>
             </div>
             <h4>University of the People</h4>
             <p>
@@ -110,9 +104,6 @@ function Resume() {
               <h3>Frameworks & Libraries</h3>
               <div className="skills-list">
                 <span className="skill-item">React</span>
-                <span className="skill-item">Node.js</span>
-                <span className="skill-item">Express</span>
-                <span className="skill-item">Bootstrap</span>
               </div>
             </div>
 
@@ -125,33 +116,32 @@ function Resume() {
               <div className="skills-list">
                 <span className="skill-item">Git</span>
                 <span className="skill-item">VS Code</span>
-                <span className="skill-item">Figma</span>
                 <span className="skill-item">GitHub</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="resume-download" data-aos="fade-up" data-aos-delay="600">
-        {/* Open in new tab */}
+      <div className="resume-download" data-aos="zoom-in" data-aos-delay="400">
+        {/* Download CV */}
         <a
-          href="https://docs.google.com/document/d/1KkYK8HQYeSEQn00Aivvdbt3o72ZsLCwC3NvQ8S3tFRo/edit?tab=t.0"
+          href="https://drive.google.com/file/d/1aDhCXu5hUFCm-T2t0AtYFVULSDTbJEFv/view?usp=sharing"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           className="download-btn"
         >
-          View Resume
+          Download CV
         </a>
 
-        {/* For downloading, use export URL with PDF format */}
+        {/* Download Resume */}
         <a
-          href="https://docs.google.com/document/d/1KkYK8HQYeSEQn00Aivvdbt3o72ZsLCwC3NvQ8S3tFRo/edit?tab=t.0"
+          href="https://drive.google.com/file/d/1aDhCXu5hUFCm-T2t0AtYFVULSDTbJEFv/view?usp=sharing"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
+          download="Jessica_Resume.pdf"
           className="download-btn"
         >
-          View Resume
+          Download Resume
         </a>
       </div>
     </div>

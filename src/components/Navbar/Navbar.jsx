@@ -95,14 +95,14 @@ const Navbar = () => {
             </li>
             <li
               className={`nav-item ${
-                location.pathname === "/resume" ? "active-item" : ""
+                location.pathname === "/experience" ? "active-item" : ""
               }`}
             >
               <Link
                 className={`nav-link ${
-                  location.pathname === "/resume" ? "active-link" : ""
+                  location.pathname === "/experience" ? "active-link" : ""
                 }`}
-                to="/resume"
+                to="/experience"
                 onClick={closeMenu}
               >
                 Experience
